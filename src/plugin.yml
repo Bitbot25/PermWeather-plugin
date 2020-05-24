@@ -10,9 +10,6 @@ commands:
   permnight:
     description: Set a permanent night
     usage: /permnight <enable:disable>
-  lobby2:
-    description: Go to the lobby
-    usage: /lobby2
   permweather:
     description: Permweather help
     usage: /permweather <help/enabled>
