@@ -22,12 +22,13 @@ class PermWeatherHelpCom : CommandExecutor {
 
             sender.sendMessage("${ChatColor.RESET}-------${ChatColor.DARK_AQUA}PermWeather${ChatColor.RESET}-------")
             sender.sendMessage("${ChatColor.DARK_AQUA}By \"Bitbot25\"")
-            sender.sendMessage("${ChatColor.DARK_AQUA}Version: 1.4")
+            sender.sendMessage("${ChatColor.DARK_AQUA}Version: 1.5")
             sender.sendMessage("${ChatColor.DARK_AQUA}Commands:")
             sender.sendMessage("${ChatColor.DARK_AQUA}/permday ${ChatColor.GRAY}<enable:disable>")
             sender.sendMessage("${ChatColor.DARK_AQUA}/permnight ${ChatColor.GRAY}<enable:disable>")
             sender.sendMessage("${ChatColor.DARK_AQUA}/permweather enabled")
             sender.sendMessage("${ChatColor.DARK_AQUA}/permweather help")
+            sender.sendMessage("${ChatColor.DARK_AQUA}/permrain ${ChatColor.GRAY}<enable:disable>")
             return true
 
         } else if (args[0] == "enabled") {

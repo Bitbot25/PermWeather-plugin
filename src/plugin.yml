@@ -1,5 +1,5 @@
 name: PermWeather
-version: 1.4
+version: 1.5
 author: Edvin Flodin
 main: com.codepentry.redpixl.permweather.PermWeather
 api-version: 1.15

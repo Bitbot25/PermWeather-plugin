@@ -4,10 +4,6 @@ import org.bukkit.plugin.java.JavaPlugin
 
 class PermWeather : JavaPlugin() {
     override fun onEnable() {
-        val lobby2com = getCommand("lobby2")
-        if (lobby2com == null)
-            return
-        lobby2com.setExecutor(Lobby2Com())
 
         val permDayCom = getCommand("permday")
         if (permDayCom == null)
