@@ -1,20 +1,23 @@
 name: PermWeather
-version: 1.1
+version: 1.4
 author: Edvin Flodin
 main: com.codepentry.redpixl.permweather.PermWeather
 api-version: 1.15
 commands:
   permday:
     description: Set a permanent day
-    usage: /permday stop:start
+    usage: /permday <enable:disable>
   permnight:
     description: Set a permanent night
-    usage: /permnight stop:start
+    usage: /permnight <enable:disable>
   lobby2:
     description: Go to the lobby
     usage: /lobby2
   permweather:
     description: Permweather help
-    usage: /permweather help
+    usage: /permweather <help/enabled>
+  permrain:
+    description: Make it rain infinitly
+    usage: /permrain <enable:disable>
 
 

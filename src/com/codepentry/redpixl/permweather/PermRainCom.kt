@@ -7,17 +7,16 @@ import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 
-class PermDayCom : CommandExecutor {
+class PermRainCom : CommandExecutor {
     override fun onCommand(sender: CommandSender, command: Command, label: String, args: Array<out String>): Boolean {
-
         if (sender !is Player) {
             sender.sendMessage("${ChatColor.DARK_AQUA} [PWeather] ${ChatColor.RED}You must be a player to execute this command!")
             return false
         }
-        if (args.size != 1) {
-            return false;
-        }
-        val currentWorld = sender.world
+        if (args.size != 1)
+
+            return false
+
         val startStop = args[0]
 
         if (startStop != "disable" && startStop != "enable")
@@ -26,22 +25,27 @@ class PermDayCom : CommandExecutor {
 
         if (startStop == "enable") {
 
-            currentWorld.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, false)
 
-            currentWorld.time = 6000
+            val currentworld = sender.world
 
-            sender.sendMessage("${ChatColor.DARK_AQUA}[PWeather] Set a permanent day!")
+            currentworld.setStorm(true)
+
+            currentworld.setGameRule(GameRule.DO_WEATHER_CYCLE, false)
+
+            sender.sendMessage("${ChatColor.DARK_AQUA}[PWeather] Enabled permanent rain!")
 
             return true
         }
         if (startStop == "disable") {
+            val currentworld = sender.world
 
-            currentWorld.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, true)
+            currentworld.setGameRule(GameRule.DO_WEATHER_CYCLE, true)
 
-            sender.sendMessage("${ChatColor.DARK_AQUA}[PWeather] Disabled a permanent day!")
+            sender.sendMessage("${ChatColor.DARK_AQUA}[PWeather] Disabled permanent rain!")
 
             return true
         }
         return false
     }
 }
+

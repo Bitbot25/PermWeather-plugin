@@ -23,6 +23,13 @@ class PermWeather : JavaPlugin() {
         if (permNightCom == null)
             return
         permNightCom.setExecutor(PermNightCom())
+
+        val permRainCom = getCommand("permrain")
+        if (permRainCom == null)
+            return
+        permRainCom.setExecutor(PermRainCom())
+
+
     }
 }
 

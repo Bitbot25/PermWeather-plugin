@@ -19,11 +19,11 @@ class PermNightCom : CommandExecutor {
 
         val startStop = args[0]
 
-        if (startStop != "stop" && startStop != "start")
+        if (startStop != "disable" && startStop != "enable")
 
             return false
 
-        if (startStop == "start") {
+        if (startStop == "enable") {
 
 
             val currentworld = sender.world
@@ -36,7 +36,7 @@ class PermNightCom : CommandExecutor {
 
             return true
         }
-        if (startStop == "stop") {
+        if (startStop == "disable") {
             val currentworld = sender.world
 
             currentworld.setGameRule(GameRule.DO_DAYLIGHT_CYCLE, true)
